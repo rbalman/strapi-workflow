@@ -9,3 +9,18 @@ run-db-docker:
 
 run-app:
 	docker run --platform=linux/amd64 --env-file .env -e DATABASE_HOST=host.docker.internal -p 1337:1337 strapi
+
+compose-up:
+	docker-compose up
+
+compose-down:
+	docker-compose down
+
+compose-down-v:
+	docker-compose down -v
+
+prod-compose-up:
+	docker-compose -f docker-compose.prod.yaml up
+
+prod-compose-down:
+	docker-compose -f docker-compose.prod.yaml down
